@@ -1,0 +1,3 @@
+#Line endings
+* text=auto
+*.json eol=lf

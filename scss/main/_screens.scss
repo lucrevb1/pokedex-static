@@ -1,0 +1,14 @@
+@use '../config' as *;
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ca215a;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  &.active {
+    z-index: 99;
+  }
+}
