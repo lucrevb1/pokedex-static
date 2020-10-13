@@ -1,3 +1,4 @@
+@use "sass:color";
 // Lengths 
 $w380px: 380px;
 $w450px: 450px;
@@ -17,22 +18,17 @@ $w1200px: 1200px;
 $w1400px: 1400px;
 $w1920px: 1920px;
 
-// Fonts
-$sanSerif: sans-serif;
-$Montserrat: 'Montserrat' , $sanSerif;
-$Hind: 'Hind' , $sanSerif;
-$PublicSans: 'Public Sans', $sanSerif;
-$OpenSans: 'Open Sans', $sanSerif;
-
+// Font Family
+$Nunito: 'Nunito';
 
 // Colors
-$white: #fff;
-$black: #000;
-$mainBlue: #0098DB;
-$anchor: #0098DF;
-$titleColor: #0098DB;
-$normalCopy: #1E1E1E;
-$leadSlideBG: #003C69;
-$blockQuoteClr: #003C69;
-$inputBorder: #D5D5D7;
-$inputSumbitBG: #0098DF;
+$White: #fff;
+$Black: #000;
+$Red-main: #ca215a;
+$Red-dark: color.adjust($Red-main, $lightness: -15%);
+$Red-light: color.adjust($Red-main, $lightness: -5%);
+
+// Types
+$normal: #a8a878;
+$grass: #78c850;
+$poison: #a040a0;

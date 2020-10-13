@@ -1,1 +1,18 @@
 @use '../config' as *;
+@use "sass:color";
+.type {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 0 5px 0 0;
+  background-color: #000;
+  color: #fff;
+  &--grass {
+    background-color: $grass;
+    box-shadow: 0px 1px 1px color.adjust($grass, $lightness: -15%);
+  }
+  &--poison {
+    background-color: $poison;
+    box-shadow: 0px 1px 1px color.adjust($poison, $lightness: -15%);
+  }
+}

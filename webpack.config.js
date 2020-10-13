@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 let config = {
   entry: './src/index.js'
@@ -68,7 +69,12 @@ module.exports = (env, argv) => {
               sourceMap: !production,
             }
           },
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer()]
+            }
+          },
           {
             loader: 'sass-loader',
             options: {

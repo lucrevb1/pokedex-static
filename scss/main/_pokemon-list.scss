@@ -1,1 +1,43 @@
 @use '../config' as *;
+
+.pokedex-list {
+  
+  &__item {
+    display: flex;
+    border-radius: 30px;
+    border: 2px solid $Red-dark;
+    line-height: 60px;
+    height: 60px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 250ms ease-out;
+    background-color: $Red-light;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      transition: background-color 250ms ease-in;
+      background-color: $Red-dark;
+    }
+  }
+  &__number {
+    font-size: 20px;
+    border: 2px solid $Red-dark;
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    margin: 0 10px 0 2px;
+    border-radius: 50%;
+    line-height: 46px;
+    background-color: $White;
+  }
+  &__title {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: $White;
+    text-shadow: 0 0 2px $Black;
+  }
+
+}
